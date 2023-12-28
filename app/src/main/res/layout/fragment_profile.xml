@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="36dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_person_24" />
+
+    <!-- Add UI elements to display user profile data -->
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="126dp"
+        android:layout_marginTop="16dp"
+        android:text="USERNAME"
+        android:textColor="@color/dark_blue"
+        android:textStyle=""
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/status"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/green_round_background"
+        android:layout_toRightOf="@+id/usernameTextView"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/profileImageView"
+        android:layout_below="@id/usernameTextView"
+        android:text="Age: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/ageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textSize="18sp"
+        android:layout_below="@id/usernameTextView"
+        android:layout_marginLeft="236dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/ageTextView"
+        android:layout_below="@id/usernameTextView"
+        android:text=" years"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/profileImageView"
+        android:layout_below="@id/age"
+        android:text="Gender: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/genderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:textSize="18sp"
+        android:layout_below="@id/ageTextView"
+        android:layout_marginLeft="236dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/interest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/profileImageView"
+        android:layout_below="@id/gender"
+        android:text="Interested in: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/interestedInTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interested In"
+        android:textSize="18sp"
+        android:layout_below="@id/genderTextView"
+        android:layout_marginLeft="236dp"
+        android:layout_marginTop="5dp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/interestedInTextView"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="36dp" />
+
+    <TextView
+        android:id="@+id/aboutme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="36dp"
+        android:text="About Me"
+        android:textColor="@color/dark_blue"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/aboutMeTextView"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:text="About Me"
+        android:textSize="14sp"
+        android:textColor="@color/grey"
+        android:layout_below="@id/aboutme"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="36dp" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/aboutMeTextView"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="36dp" />
+
+    <TextView
+        android:id="@+id/gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="36dp"
+        android:layout_below="@id/divider2"
+        android:textColor="@color/dark_blue"
+        android:text="My Gallery"
+        android:textSize="18sp"/>
+
+
+    <ImageView
+        android:id="@+id/addImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_add_circle_outline_24"
+        android:layout_toRightOf="@+id/gallery"
+        android:layout_below="@id/divider2"
+        android:clickable="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="200dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/galleryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addImageButton"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="36dp" />
+
+    <!-- Add other UI elements as needed -->
+
+</RelativeLayout>

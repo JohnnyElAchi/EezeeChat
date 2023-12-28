@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+}
+
+android {
+
+    aaptOptions {
+        // Exclude specific PNG files or directories
+        ignoreAssetsPattern "<res/drawable/first_pic2>"
+        ignoreAssetsPattern "<res/drawable/girlpic>"
+        ignoreAssetsPattern "<res/drawable/guypic>"
+        ignoreAssetsPattern "<res/drawable/chat_app_logo>"
+    }
+    signingConfigs {
+        ChatApp {
+            storeFile file('C:\\Users\\johny\\AndroidStudioProjects\\MyApplication2\\app\\release\\ChatApp.jks')
+            storePassword 'Johnny700&80'
+            keyAlias 'ChatAppAlias'
+            keyPassword 'Johnny700&80'
+        }
+    }
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.johnnyelachi"
+        minSdk 21
+        targetSdk 30
+        versionCode 10
+        versionName "1.0.9"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'com.android.billingclient:billing:6.1.0'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.sun.mail:android-mail:1.6.5'
+    implementation 'com.sun.mail:android-activation:1.6.5'
+    implementation platform("com.google.firebase:firebase-bom:32.2.2")
+    implementation "com.google.firebase:firebase-analytics-ktx"
+    implementation "com.google.firebase:firebase-auth-ktx"
+    implementation 'com.google.android.gms:play-services-auth:20.0.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-auth-ktx:22.1.1'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.7.1'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.2.1'
+    implementation 'com.google.firebase:firebase-database-ktx:20.3.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'me.leolin:ShortcutBadger:1.1.22@aar'
+
+}

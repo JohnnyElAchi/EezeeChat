@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/purple_500"> <!-- Pink background color, customize as needed -->
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="380dp"
+        android:layout_height="380dp"
+        android:background="@color/white"
+        android:src="@drawable/firsts_pic2"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img"
+        android:background="@color/pink"
+        android:gravity="center"
+        android:text="Jane Doe"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/connected"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt"
+        android:textColor="@color/purple_700"
+        android:text="connected..."
+        android:textSize="14sp"
+        android:background="@color/white"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/ringing"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/connected"
+        android:textColor="@color/light_grey"
+        android:background="@color/white"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/speakerButton"
+        android:layout_width="190dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/ringing"
+        android:background="@color/pink"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="endCall"
+        android:src="@drawable/ic_baseline_volume_up_24" />
+
+    <ImageView
+        android:id="@+id/muteButton"
+        android:layout_width="190dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/ringing"
+        android:layout_marginLeft="190dp"
+        android:background="@color/pink"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="endCall"
+        android:src="@drawable/ic_baseline_mic_off_24" />
+
+
+    <ImageView
+        android:id="@+id/endCallButton"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/speakerButton"
+        android:background="@color/pink"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="endCall"
+        android:src="@drawable/ic_baseline_call_end_24" />
+
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_favorite"
+        android:title="Add to Favorite" />
+    <item
+        android:id="@+id/action_block"
+        android:title="Block User" />
+    <item
+        android:id="@+id/action_remove"
+        android:title="Remove User" />
+    <item
+        android:id="@+id/action_report"
+        android:title="Report User" />
+</menu>

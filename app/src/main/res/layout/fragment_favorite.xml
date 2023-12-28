@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/orange"
+    tools:context=".HomeFragment">
+
+
+
+<!--    &lt;!&ndash; CardView to display the last called person &ndash;&gt;-->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/lastCalledCard"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="5dp"-->
+<!--        android:clickable="true"-->
+<!--        android:foreground="?android:attr/selectableItemBackground"-->
+<!--        app:cardCornerRadius="1dp"-->
+<!--        app:cardElevation="8dp">-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            &lt;!&ndash; Profile Picture &ndash;&gt;-->
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:id="@+id/lastCalledProfileImageView"-->
+<!--                android:layout_width="70dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:padding="8dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/eezeechatapplogo"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            &lt;!&ndash; User's Name &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/lastCalledUserName"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:text=""-->
+<!--                android:textColor="@color/orange"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="@id/lastCalledProfileImageView"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            &lt;!&ndash; User's Description &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/lastCalledUserDescription"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:text=""-->
+<!--                android:textSize="14sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="@id/lastCalledProfileImageView"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/lastCalledUserName" />-->
+
+<!--            &lt;!&ndash; Image Below &ndash;&gt;-->
+<!--            <ImageView-->
+<!--                android:id="@+id/lastCalledBelowImageView"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:src="@drawable/eezeechatapplogo"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintDimensionRatio="H,1:1"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/lastCalledUserDescription" />-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+    <!-- RecyclerView for the list of cards -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <RelativeLayout
+        android:id="@+id/applogo"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/profileIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_background"
+            android:clickable="true"
+            android:contentDescription="Profile Icon"
+            android:src="@drawable/ic_baseline_person_24" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/eezeechatuplogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+
+        <RelativeLayout
+            android:id="@+id/buycoins"
+            android:clickable="true"
+            android:layout_width="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="70dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/numberOfCoins"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:text=""
+                android:textColor="@color/orange"
+                android:layout_marginTop="5dp"/>
+
+            <ImageView
+                android:id="@+id/paymentLogo"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/paymentlogo"
+                android:layout_below="@id/numberOfCoins"
+                android:layout_marginTop="5dp"/>
+
+            <ImageView
+                android:id="@+id/rightArrow"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_baseline_arrow_right_24"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="65dp">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="1dp">
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="1dp"
+            app:cardElevation="8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Profile Picture -->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImageView1"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/firsts_pic2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- User's Name -->
+                <TextView
+                    android:id="@+id/userName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Jane Doe"
+                    android:textColor="@color/orange"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/profileImageView1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- User's Description -->
+                <TextView
+                    android:id="@+id/userDescription1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="27 Years"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/profileImageView1"
+                    app:layout_constraintTop_toBottomOf="@id/userName1" />
+
+                <!-- Image Below -->
+                <ImageView
+                    android:id="@+id/belowImageView1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/girlpic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/userDescription1"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    />
+
+                <ImageView
+                    android:id="@+id/CallButton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/callbtn_selector"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="call"
+                    android:src="@drawable/ic_baseline_call_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/belowImageView1" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="1dp"
+            app:cardElevation="8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Profile Picture -->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImageView"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/guypic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- User's Name -->
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="John Doe"
+                    android:textColor="@color/orange"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/profileImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- User's Description -->
+                <TextView
+                    android:id="@+id/userDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="22 Years"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/profileImageView"
+                    app:layout_constraintTop_toBottomOf="@id/userName" />
+
+                <!-- Image Below -->
+                <ImageView
+                    android:id="@+id/belowImageView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/guypic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintTop_toBottomOf="@id/userDescription" />
+
+                <ImageView
+                    android:id="@+id/CallButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/callbtn_selector"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="call"
+                    android:src="@drawable/ic_baseline_call_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/belowImageView" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

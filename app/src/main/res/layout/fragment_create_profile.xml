@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ProfileFragment">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="65dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".ProfileFragment">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:background="@drawable/round_background"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_person_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Upload Photo"
+            android:fontFamily="@font/gotham"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+        <TextView
+            android:id="@+id/uremail"
+            android:layout_width="155dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="36dp"
+            android:text="NAME "
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/gotham"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username" />
+
+        <EditText
+            android:id="@+id/NameEditText"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:hint=""
+            android:background="@drawable/register_bg"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:fontFamily="@font/gotham"
+            app:layout_constraintStart_toEndOf="@+id/uremail"
+            app:layout_constraintTop_toTopOf="@+id/uremail" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="155dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="16dp"
+            android:text="AGE "
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/gotham"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NameEditText" />
+
+        <EditText
+            android:id="@+id/ageEditText"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:hint=""
+            android:background="@drawable/register_bg"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:fontFamily="@font/gotham"
+            app:layout_constraintStart_toEndOf="@+id/age"
+            app:layout_constraintTop_toTopOf="@+id/age" />
+
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="155dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="26dp"
+            android:text="GENDER "
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/gotham"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ageEditText" />
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/gender"
+            app:layout_constraintTop_toTopOf="@+id/gender" >
+        
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/gotham" />
+    
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/gotham" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/interest"
+            android:layout_width="155dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="26dp"
+            android:text="INTERESTED IN"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/gotham"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup" />
+
+
+        <RadioGroup
+            android:id="@+id/interestRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/gender"
+            app:layout_constraintTop_toTopOf="@+id/interest">
+
+            <RadioButton
+                android:id="@+id/intmale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/gotham" />
+
+            <RadioButton
+                android:id="@+id/intfemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/gotham" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ABOUT ME"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/gotham"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interestRadioGroup" />
+
+
+        <EditText
+            android:id="@+id/aboutedt"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:background="@drawable/register_bg"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/gotham"
+            app:layout_constraintStart_toEndOf="@+id/interest"
+            app:layout_constraintTop_toTopOf="@+id/about" />
+
+        <!-- Add other TextViews and EditTexts as needed -->
+
+        <TextView
+            android:id="@+id/saveButton"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:text="Create Profile"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="100dp"
+            android:background="@drawable/btn_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aboutedt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</FrameLayout>

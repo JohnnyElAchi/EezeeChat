@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/firstfragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/eezeechatbg">
+
+    <RelativeLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/backbtnf"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <ImageView
+            android:id="@+id/status"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/firstTitle"
+            android:src="@drawable/green_round_background" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/firstTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:text="Jane"
+            android:textColor="@color/pink"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/firstDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Age: 27 years"
+            android:textColor="@color/grey"
+            android:textSize="21sp" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_below="@id/firstDescription"
+            android:layout_margin="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/girlpic" />
+
+        <ImageView
+            android:id="@+id/menuButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/img"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_round_error_outline_24" />
+
+        <ImageView
+            android:id="@+id/callgirl"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/callbtn_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_baseline_call_24" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/menuButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="hello world"
+            android:textSize="18sp"
+            android:textColor="@color/grey" />
+    </RelativeLayout>
+</RelativeLayout>

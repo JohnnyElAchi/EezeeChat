@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/blockedcontainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/applogo"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:id="@+id/eezeelogo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/eezeechatuplogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/buycoins"
+            android:clickable="true"
+            android:layout_width="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="70dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/numberOfCoins"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:text=""
+                android:textColor="@color/orange"
+                android:layout_marginTop="5dp"/>
+
+            <ImageView
+                android:id="@+id/paymentLogo"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/paymentlogo"
+                android:layout_below="@id/numberOfCoins"
+                android:layout_marginTop="5dp"/>
+
+            <ImageView
+                android:id="@+id/rightArrow"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_baseline_arrow_right_24"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"/>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/blockedProfileImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/applogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Blocked User's Image" />
+
+    <TextView
+        android:id="@+id/blockedUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blockedProfileImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/blockedUserDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blockedUserName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textSize="14sp" />
+
+
+    <TextView
+            android:id="@+id/blockedIsGirl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blockedUserName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textSize="14sp" />
+
+    <!-- You can add more UI elements as needed to display the blocked user's information -->
+
+</RelativeLayout>

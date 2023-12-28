@@ -1,0 +1,235 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scaledView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/buycoinsbg">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Refil your account to make calls"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_below="@id/title"
+            android:text="Choose the package that fits you"
+            android:textColor="@color/red"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true" />
+
+
+        <RelativeLayout
+            android:id="@+id/pack1"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true">
+
+                <TextView
+                    android:id="@+id/pack1.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="5mins/"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pack1.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@id/pack1.1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="1$"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pack2"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/pack1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:focusable="true">
+
+                <TextView
+                    android:id="@+id/pack2.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="10mins/"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/pack2.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/pack2.1"
+                    android:text="2$"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pack3"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/pack2"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:focusable="true">
+
+                <TextView
+                    android:id="@+id/pack3.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="25mins/"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/pack3.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/pack3.1"
+                    android:text="5$"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pack4"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pack3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true">
+
+                <TextView
+                    android:id="@+id/pack4.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="50mins/"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pack4.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@id/pack4.1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="10$"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/subsc4"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pack4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true">
+
+                <TextView
+                    android:id="@+id/subsc4.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="Subscription/"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/subsc4.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@id/subsc4.1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="20$"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+        </RelativeLayout>
+
+</RelativeLayout>
+
+

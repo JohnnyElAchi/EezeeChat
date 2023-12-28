@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Zero">
+
+    <!-- Linear Layout for Card Content -->
+    <LinearLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.118">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/zeroTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:layout_marginBottom="8dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="ZERO"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <!-- HorizontalScrollView for Pictures -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Image View 1 -->
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginEnd="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/firsts_pic2" />
+
+                <!-- Image View 2 -->
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginEnd="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/firsts_pic" />
+
+                <!-- Image View 3 -->
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginEnd="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/firsts_pic" />
+
+                <!-- Add more ImageViews for additional images as needed -->
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/zeroDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:text="Zero's Description"
+            android:textColor="@color/white"
+            android:textSize="21sp" />
+
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="Menu"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/zeroDescription"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

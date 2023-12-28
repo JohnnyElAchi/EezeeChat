@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/swipe"
+        android:title="MATCH"
+        android:icon="@drawable/ic_baseline_swap_horizontal_swipe_24"/>
+
+<!--    <item-->
+<!--        android:id="@+id/home"-->
+<!--        android:title="SELECT"-->
+<!--        android:icon="@drawable/select"/>-->
+
+
+    <item
+        android:id="@+id/favorite"
+        android:title="FAVORITE"
+        android:icon="@drawable/ic_baseline_favorite_24"/>
+
+
+    <item
+        android:id="@+id/blocked"
+        android:title="REMOVED"
+        android:icon="@drawable/ic_baseline_delete_24"/>
+
+    <item
+        android:id="@+id/help"
+        android:title="HELP"
+        android:icon="@drawable/ic_round_error_outline_24" />
+
+
+
+</menu>

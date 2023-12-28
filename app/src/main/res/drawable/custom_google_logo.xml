@@ -1,0 +1,4 @@
+<!-- res/drawable/custom_google_logo.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/logo_google" android:width="40dp" android:height="40dp" />
+</layer-list>
